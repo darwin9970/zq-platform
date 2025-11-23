@@ -25,7 +25,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 # 从环境变量读取，如果没有则使用默认值，但生产环境必须设置
-import secrets
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-y(df$uwnha$0nrkmh5g(ri^=^#3qru3bf8$pw+t6e_wb*op7gj')
 
 # 生产环境检查 SECRET_KEY
@@ -264,15 +263,6 @@ CELERY_RESULT_BACKEND = 'django-db'  # celery结果存储到数据库中
 # # ================================================= #
 # # ******************** JWT 配置 ***************** #
 # # ================================================= #
-# JWT 密钥从环境变量读取
-JWT_ACCESS_SECRET_KEY = os.environ.get(
-    'JWT_ACCESS_SECRET_KEY',
-    'default-access-secret-key-change-in-production'
-)
-JWT_REFRESH_SECRET_KEY = os.environ.get(
-    'JWT_REFRESH_SECRET_KEY', 
-    'default-refresh-secret-key-change-in-production'
-)
 
 # 生产环境验证密钥已配置
 if not DEBUG:

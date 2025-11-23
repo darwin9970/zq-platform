@@ -32,7 +32,7 @@ git -v
 
 ```sh [GitHub]
 # clone 代码
-git clone https://github.com/vbenjs/vue-vben-admin.git
+git clone https://github.com/jiangzhikj/zq-platform.git
 ```
 
 ```sh [Gitee]

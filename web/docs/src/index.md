@@ -19,7 +19,7 @@ hero:
       link: https://www.vben.pro
     - theme: alt
       text: 在 GitHub 查看
-      link: https://github.com/vbenjs/vue-vben-admin
+      link: https://github.com/jiangzhikj/zq-platform
     - theme: alt
       text: DeepWiki 文档
       link: https://deepwiki.com/vbenjs/vue-vben-admin

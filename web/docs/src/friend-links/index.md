@@ -6,7 +6,7 @@
 
 ### 添加作者，并注明来意
 
-- 通过邮箱联系作者： [ann.vben@gmail.com](mailto:ann.vben@gmail.com)
+- 通过邮箱联系作者： [jiangzhikj@outlook.com](mailto:jiangzhikj@outlook.com)
 - 通过微信联系作者：
 
  <img src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/wechat.jpg" style="width: 300px;"/>

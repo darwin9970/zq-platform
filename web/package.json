@@ -1,5 +1,5 @@
 {
-  "name": "vben-admin-monorepo",
+  "name": "zq-platform",
   "version": "5.5.9",
   "private": true,
   "keywords": [
@@ -14,13 +14,13 @@
     "vue vben admin pro",
     "vue3"
   ],
-  "homepage": "https://github.com/vbenjs/vue-vben-admin",
-  "bugs": "https://github.com/vbenjs/vue-vben-admin/issues",
+  "homepage": "https://github.com/jiangzhikj/zq-platform",
+  "bugs": "https://github.com/jiangzhikj/zq-platform/issues",
   "repository": "vbenjs/vue-vben-admin.git",
   "license": "MIT",
   "author": {
-    "name": "vben",
-    "email": "ann.vben@gmail.com",
+    "name": "zq-platform",
+    "email": "jiangzhikj@outlook.com",
     "url": "https://github.com/anncwb"
   },
   "type": "module",

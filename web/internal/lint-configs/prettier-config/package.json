@@ -2,11 +2,11 @@
   "name": "@vben/prettier-config",
   "version": "5.0.0",
   "private": true,
-  "homepage": "https://github.com/vbenjs/vue-vben-admin",
-  "bugs": "https://github.com/vbenjs/vue-vben-admin/issues",
+  "homepage": "https://github.com/jiangzhikj/zq-platform",
+  "bugs": "https://github.com/jiangzhikj/zq-platform/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbenjs/vue-vben-admin.git",
+    "url": "git+https://github.com/jiangzhikj/zq-platform.git",
     "directory": "internal/lint-configs/prettier-config"
   },
   "license": "MIT",

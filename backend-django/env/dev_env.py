@@ -22,6 +22,23 @@ REDIS_PASSWORD = ''
 REDIS_HOST = '127.0.0.1'
 REDIS_DB = '2'
 REDIS_URL = f'redis://:{REDIS_PASSWORD or ""}@{REDIS_HOST}:6379'
+
+# # ================================================= #
+# # ******************** JWT 配置 ***************** #
+# # ================================================= #
+
+# JWT 密钥从环境变量读取
+JWT_ACCESS_SECRET_KEY = os.environ.get(
+    'JWT_ACCESS_SECRET_KEY',
+    'default-access-secret-key-change-in-production'
+)
+JWT_REFRESH_SECRET_KEY = os.environ.get(
+    'JWT_REFRESH_SECRET_KEY',
+    'default-refresh-secret-key-change-in-production'
+)
+
+
+
 # ================================================= #
 # ******** 其他配置 *********** #
 # ================================================= #

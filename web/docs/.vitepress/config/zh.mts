@@ -16,7 +16,7 @@ export const zh = defineConfig({
     },
     editLink: {
       pattern:
-        'https://github.com/vbenjs/vue-vben-admin/edit/main/docs/src/:path',
+        'https://github.com/jiangzhikj/zq-platform/edit/main/docs/src/:path',
       text: '在 GitHub 上编辑此页面',
     },
     footer: {
@@ -267,7 +267,7 @@ function nav(): DefaultTheme.NavItem[] {
       text: version,
       items: [
         {
-          link: 'https://github.com/vbenjs/vue-vben-admin/releases',
+          link: 'https://github.com/jiangzhikj/zq-platform/releases',
           text: '更新日志',
         },
         {
@@ -275,7 +275,7 @@ function nav(): DefaultTheme.NavItem[] {
           text: '路线图',
         },
         {
-          link: 'https://github.com/vbenjs/vue-vben-admin/blob/main/.github/contributing.md',
+          link: 'https://github.com/jiangzhikj/zq-platform/blob/main/.github/contributing.md',
           text: '贡献',
         },
       ],
