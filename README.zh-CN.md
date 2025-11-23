@@ -13,6 +13,9 @@
 
 </div>
 
+## 演示链接
+[演示链接 https://zq.fuadmin.cn](https://zq.fuadmin.cn/)
+
 ## 📖 项目简介
 
 zq-platform 是一个功能完善的企业级后台管理系统解决方案，采用前后端分离架构。后端使用 Django 5.2 + Django Ninja 构建高性能 RESTful API，前端基于 Vue 3 + Vben Admin + Element Plus 打造现代化的管理界面。
