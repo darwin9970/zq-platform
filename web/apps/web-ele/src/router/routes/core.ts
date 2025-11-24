@@ -89,8 +89,20 @@ const coreRoutes: RouteRecordRaw[] = [
         meta: {
           title: $t('page.auth.register'),
         },
-      },
+      }
     ],
+  },
+  // OAuth 回调路由（独立路由，不在 auth 布局下，支持多个提供商）
+  {
+    name: 'OAuthCallback',
+    path: '/oauth/:provider/callback',
+    component: () => import('#/views/_core/authentication/oauth-callback.vue'),
+    meta: {
+      hideInBreadcrumb: true,
+      hideInMenu: true,
+      hideInTab: true,
+      title: 'OAuth 登录回调',
+    },
   },
 ];
 

@@ -181,6 +181,77 @@ class User(RootModel):
         help_text="最后登录IP",
     )
     
+    # OAuth 相关字段
+    oauth_provider = models.CharField(
+        max_length=50,
+        null=True,
+        blank=True,
+        help_text="OAuth 提供商 (gitee/github/wechat 等)",
+        db_index=True,
+    )
+    
+    gitee_id = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        unique=True,
+        help_text="Gitee 用户 ID",
+        db_index=True,
+    )
+    
+    github_id = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        unique=True,
+        help_text="GitHub 用户 ID",
+        db_index=True,
+    )
+    
+    qq_id = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        unique=True,
+        help_text="QQ 用户 openid",
+        db_index=True,
+    )
+    
+    google_id = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        unique=True,
+        help_text="Google 用户 ID",
+        db_index=True,
+    )
+    
+    wechat_unionid = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        unique=True,
+        help_text="微信 UnionID (跨应用唯一)",
+        db_index=True,
+    )
+    
+    wechat_openid = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        help_text="微信 OpenID (当前应用)",
+        db_index=True,
+    )
+    
+    microsoft_id = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        unique=True,
+        help_text="Microsoft 用户 ID (GUID)",
+        db_index=True,
+    )
+    
     # 关联的岗位
     post = models.ManyToManyField(
         to="core.Post",

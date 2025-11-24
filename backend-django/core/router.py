@@ -22,6 +22,7 @@ from core.redis_manager.redis_manager_api import router as redis_manager_router
 from core.database_monitor.database_monitor_api import router as database_monitor_router
 from core.database_manager.database_manager_api import router as database_manager_router
 from core.file_manager.file_manager_api import router as file_manager_router
+from core.oauth.oauth_api import router as oauth_router
 
 
 # 创建核心模块的总路由
@@ -44,4 +45,5 @@ core_router.add_router("", redis_manager_router, tags=["Core-RedisManager"])
 core_router.add_router("", database_monitor_router, tags=["Core-DatabaseMonitor"])
 core_router.add_router("", database_manager_router, tags=["Core-DatabaseManager"])
 core_router.add_router("", file_manager_router, tags=["Core-FileManager"])
+core_router.add_router("/oauth", oauth_router, tags=["Core-OAuth"])
 
