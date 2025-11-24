@@ -14,7 +14,7 @@
 </div>
 
 ## 演示链接
-[演示链接 https://zq.fuadmin.cn](https://zq.fuadmin.cn/)
+[https://django-ninja.zq-platform.cn](https://django-ninja.zq-platform.cn/)
 
 ## 📖 项目简介
 
