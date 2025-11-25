@@ -9,6 +9,7 @@ from ninja import Router, Schema
 from ninja.errors import HttpError
 from django.http import HttpRequest
 
+from common.utils.request_util import get_request_ip
 from .oauth_schema import OAuthCallbackSchema, OAuthLoginResponseSchema
 from .oauth_service import (
     GiteeOAuthService, GitHubOAuthService, QQOAuthService, GoogleOAuthService,
@@ -82,7 +83,7 @@ def oauth_callback(request: HttpRequest, provider: str, data: OAuthCallbackSchem
         service_class = OAUTH_PROVIDERS[provider]
         
         # 获取客户端 IP 和 User-Agent
-        ip_address = request.META.get('REMOTE_ADDR', '')
+        ip_address = get_request_ip(request)
         user_agent = request.META.get('HTTP_USER_AGENT', '')
         
         # 处理 OAuth 登录（传递 provider 作为登录方式）

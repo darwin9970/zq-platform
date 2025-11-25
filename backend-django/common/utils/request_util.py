@@ -11,13 +11,25 @@ from user_agents import parse
 def get_request_ip(request):
     """
     获取请求IP
+    优先从 X-Forwarded-For 或 X-Real-IP 获取真实客户端 IP
+    适配 Nginx/Docker 反向代理环境
+    
     :param request:
     :return:
     """
+    # X-Forwarded-For 格式: client, proxy1, proxy2
+    # 第一个是真实客户端 IP
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR', '')
     if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[-1].strip()
+        ip = x_forwarded_for.split(',')[0].strip()
         return ip
+    
+    # X-Real-IP 是 Nginx 常用的头
+    x_real_ip = request.META.get('HTTP_X_REAL_IP', '')
+    if x_real_ip:
+        return x_real_ip.strip()
+    
+    # 最后才使用 REMOTE_ADDR（在反向代理环境下这会是代理服务器 IP）
     ip = request.META.get('REMOTE_ADDR', '') or getattr(request, 'request_ip', None)
     return ip or 'unknown'
 
