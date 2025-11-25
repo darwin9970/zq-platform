@@ -44,7 +44,7 @@ JWT_REFRESH_SECRET_KEY = os.environ.get(
 # ================================================= #
 IS_DEMO = True
 
-
+ENABLE_SCHEDULER = True
 # ================================================= #
 # ******** OAuth 配置 *********** #
 # ================================================= #
@@ -82,3 +82,13 @@ WECHAT_REDIRECT_URI = os.environ.get('WECHAT_REDIRECT_URI', 'https://django-ninj
 MICROSOFT_CLIENT_ID = os.environ.get('MICROSOFT_CLIENT_ID', 'your-microsoft-client-id')
 MICROSOFT_CLIENT_SECRET = os.environ.get('MICROSOFT_CLIENT_SECRET', 'your-microsoft-client-secret')
 MICROSOFT_REDIRECT_URI = os.environ.get('MICROSOFT_REDIRECT_URI', 'https://django-ninja.zq-platform.cn/oauth/microsoft/callback')
+
+# 钉钉 OAuth
+DINGTALK_APP_ID = os.environ.get('DINGTALK_APP_ID', 'your-dingtalk-app-id')
+DINGTALK_APP_SECRET = os.environ.get('DINGTALK_APP_SECRET', 'your-dingtalk-app-secret')
+DINGTALK_REDIRECT_URI = os.environ.get('DINGTALK_REDIRECT_URI', 'http://localhost:5777/oauth/dingtalk/callback')
+
+# 飞书 OAuth
+FEISHU_APP_ID = os.environ.get('FEISHU_APP_ID', 'your-feishu-app-id')
+FEISHU_APP_SECRET = os.environ.get('FEISHU_APP_SECRET', 'your-feishu-app-secret')
+FEISHU_REDIRECT_URI = os.environ.get('FEISHU_REDIRECT_URI', 'http://localhost:5777/oauth/feishu/callback')

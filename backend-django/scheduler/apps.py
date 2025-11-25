@@ -7,6 +7,8 @@ Scheduler App Config - 定时任务应用配置
 from django.apps import AppConfig
 import logging
 
+from application import settings
+
 logger = logging.getLogger(__name__)
 
 
@@ -39,7 +41,7 @@ class SchedulerConfig(AppConfig):
         elif os.environ.get('ENABLE_SCHEDULER') == 'true':
             should_start = True
         
-        if should_start:
+        if should_start and settings.ENABLE_SCHEDULER:
             try:
                 from scheduler.service import scheduler_service
                 
